@@ -203,7 +203,7 @@ else:
     
     
 fig = plt.figure(5)
-plt.hist([np.log(i) if i > 0 else 0 for i in dists], 50, normed=1, facecolor='blue', alpha=0.75)
+plt.hist([np.log(i) if i > 0 else 0 for i in dists], 50, density=1, facecolor='blue', alpha=0.75)
 plt.xlabel('log distance in parsecs')
 distHist = np.histogram([np.log(i) if i > 0 else 0 for i in dists], bins = 50)
 plt.title('histogram of distance\n most common:' + str(round(3.26*np.exp(distHist[1][np.argmax(distHist[0])]),2)) + ' light years')
